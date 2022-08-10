@@ -13,6 +13,7 @@ function filldetails() {
     document.querySelector('.body').style = "background-image:url(bg-2.jpg);background-repeat:no-repeat";
     document.getElementById('input_box').style.display = "none";
     document.getElementById('game').style.display = "flex";
+    document.getElementById('score_board_body').style="display:none";
 
 
     //displaying name
