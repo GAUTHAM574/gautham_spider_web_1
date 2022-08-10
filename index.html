@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man 0 Man</title>
+    <link rel="stylesheet" href="./task1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+    <h2 class="heading">MAn 0 maN</h2>
+    <div class="input_box" id="input_box">
+        <h3 class="into">Enter Player names</h3>
+        <input type="text" id="p1_name" class="input_p_name" value="Player-1" placeholder="Player-1">
+        <input type="text" id="p2_name" class="input_p_name" value="Player-2" placeholder="Player-2">
+        <button id="start_butt" class="butt clr_blck">START</button>
+    </div>
+    <div class="score board">
+        <th>ScoreBoard</th>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>SCORE</th>
+                </tr>
+            </thead>
+            <tbody id="score_board_body">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="game" id="game">
+        <table cellpadding="10px" class="game2">
+            <thead>
+                <tr>
+                    <th>Box-number</th>
+                    <th id="player_1_box">Player 1</th>
+                    <th id="player_2_box">Player 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- row-1 -->
+                <tr class="game-div">
+                    <td>
+                        <h1>1</h1>
+                    </td>
+                    <td id="p1-b1"><img src="man_0.jpg"></td>
+                    <td id="p2-b1"><img src="man_0.jpg"></td>
+                </tr>
+                <!-- row-2 -->
+                <tr class="game-div">
+                    <td>
+                        <h1>2</h1>
+                    </td>
+                    <td id="p1-b2"><img src="man_0.jpg"></td>
+                    <td id="p2-b2"><img src="man_0.jpg"></td>
+                </tr>
+                <!-- row-3 -->
+                <tr class="game-div">
+                    <td>
+                        <h1>3</h1>
+                    </td>
+                    <td id="p1-b3"><img src="man_0.jpg"></td>
+                    <td id="p2-b3"><img src="man_0.jpg"></td>
+                </tr>
+                <!-- row-4 -->
+                <tr class="game-div">
+                    <td>
+                        <h1>4</h1>
+                    </td>
+                    <td id="p1-b4"><img src="man_0.jpg"></td>
+                    <td id="p2-b4"><img src="man_0.jpg"></td>
+                </tr>
+                <!-- row-5 -->
+                <tr class="game-div">
+                    <td>
+                        <h1>5</h1>
+                    </td>
+                    <td id="p1-b5"><img src="man_0.jpg"></td>
+                    <td id="p2-b5"><img src="man_0.jpg"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="numbers" id="numbers">
+        <button class="rand_num" id="rand_num">Generate number</button>
+        <h2 id="disp_num" class="disp_num"></h2>
+        <button id="reset" class="butt rand_num">RESET</button>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        var L = [];
+        var keys = Object.keys(localStorage);
+        for (var i of keys) {
+            L.push([parseInt(localStorage.getItem(i)), i])
+        }
+
+        function sortfunc(a, b) {
+            if (a[0] == b[0]) {
+                return 0;
+            } else {
+                return (a[0] < b[0]) ? -1 : 1;
+            }
+        }
+        L.sort(sortfunc);
+        L.reverse();
+        console.log(L);
+        5 > L.length ? loop_min = 5 : L.length
+        for (i = 0; i < loop_min; i++) {
+            document.getElementById('score_board_body').innerHTML += `<tr>
+                <td>${L[i][1]}</td>
+                <td>${L[i][0]}</td>
+                    </tr>`;
+        }
+    </script>
+</body>
+
+</html>

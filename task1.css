@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body {
+    background-image: url(bg-1.jpg);
+    background-repeat: no-repeat;
+}
+
+.heading {
+    padding: 1%;
+    background-color: rgba(127, 255, 212, 0.8);
+    text-align: center;
+    border: 2px solid green;
+}
+
+.input_box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-left: 5%;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 60%;
+}
+
+.input_p_name {
+    color: black;
+}
+
+.clr_blck {
+    color: black;
+}
+
+.butt {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.game {
+    display: none;
+    margin-top: 1%;
+
+}
+
+.game2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.numbers {
+    display: none;
+    margin-top: 1rem;
+}
+
+.rand_num {
+    font-size: 20px;
+    border: 3px solid white;
+    background-color: black;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.disp_num {
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+    /* border-collapse: collapse; */
+}
